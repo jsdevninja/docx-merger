@@ -77,7 +77,7 @@ function DocxMerger(options, files) {
 
     xml = xml.replace(xml.slice(startIndex, endIndex), this._body.join(""));
 
-    RelContentType.generateContentTypes(zip, this._contentTypes);
+    // RelContentType.generateContentTypes(zip, this._contentTypes);
     Media.copyMediaFiles(zip, this._media, this._files);
     RelContentType.generateRelations(zip, this._rel);
     bulletsNumbering.generateNumbering(zip, this._numbering);
